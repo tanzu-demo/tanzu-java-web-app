@@ -1,0 +1,43 @@
+id: 48035eb2-f0c4-43d5-b2d6-1049eba01765
+timestamp: 2023-04-07T20:34:22Z
+username: risbergt
+source: VSCODE
+accelerator:
+  name: tanzu-java-web-app
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: tanzu-java-web-app
+    ref:
+      branch: main
+      tag: tap-1.5.0
+    commit: 0c08007acf53f22d8ec7612c48d00c19a8c0dfa5
+fragments:
+  - name: build-wrapper-maven
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/build-wrapper-maven
+      ref:
+        branch: main
+      commit: e28e54aac238cf6165c228ed7134c1cfb038150a
+  - name: java-version
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/java-version
+      ref:
+        branch: main
+      commit: e28e54aac238cf6165c228ed7134c1cfb038150a
+  - name: tap-workload
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+      subPath: fragments/tap-workload
+      ref:
+        branch: main
+      commit: e28e54aac238cf6165c228ed7134c1cfb038150a
+options:
+  bsGitBranch: main
+  bsGitRepository: github.com?owner=tanzu-demo&repo=tanzu-java-web-app
+  includeBuildToolWrapper: true
+  javaVersion: 17
+  projectName: tanzu-java-web-app
+  repositoryPrefix: dev.local
+  updateBoot3: true
